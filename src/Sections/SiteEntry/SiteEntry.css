@@ -1,0 +1,17 @@
+.entry{
+    height: 92vh;
+    width: 100%;
+}
+
+.entry h1{
+    font-size: 5rem;
+    line-height: 6rem;
+    font-family: 'Gilroy-bold' , sans-serif,'Gill Sans', 'Gill Sans MT', Calibri;
+}
+
+.entry p{
+    padding-top: 1rem;
+    width: 60ch;
+    font-weight: 600;
+    font-size: 1.15rem;
+}

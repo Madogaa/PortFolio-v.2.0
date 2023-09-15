@@ -20,7 +20,7 @@ function TempLine() {
     });
 
     const animateLine = (line, start, end, totalLength) => {
-      const scrollY = window.scrollY;
+      const scrollY = window.scrollY - (window.innerHeight * 6 / 7 );
       let progress = 1 - (scrollY - start) / (end - start); // Calcular el progreso relativo a cada línea
       progress = Math.min(1, Math.max(0, progress));
       const currentOffset = totalLength * progress;
@@ -49,10 +49,10 @@ function TempLine() {
     const line03 = document.querySelector(".theLine03");
 
     const totalLength = path.getTotalLength();
-    const pathStart = totalLength * (10 / 100);
-    const line01Start = totalLength * (32.5 / 100);
-    const line02Start = totalLength * (55 / 100);
-    const line03Start = totalLength * (74.5 / 100);
+    const pathStart = 0;
+    const line01Start = totalLength * (20 / 100);
+    const line02Start = totalLength * (51 / 100);
+    const line03Start = totalLength * (78 / 100);
 
     window.addEventListener("scroll", () => {
       animateLine(
@@ -87,92 +87,121 @@ function TempLine() {
   }, []);
 
   return (
-    <div className="relative">
-      <div id="box01" className={`box ${lineOpacity.line01 > 0 ? 'box-visible' : 'opacity-0'}`}>
-        Caja1
+    <div className="relative flex justify-center items-center w-full ">
+      <div
+        id="box01"
+        className={`box ${
+          lineOpacity.line01 > 0 ? "box-visible" : "opacity-0"
+        }`}
+      >
+        <h4>Bachillerato Cientifico</h4>
+        <h6>IES Juanelo Turriano</h6>
+        <p>Toledo, Spain</p>
       </div>
-      <div id="box02" className={`box ${lineOpacity.line02 > 0 ? 'box-visible' : 'opacity-0'}`}>
-      Caja2
+      <div
+        id="box02"
+        className={`box ${
+          lineOpacity.line02 > 0 ? "box-visible" : "opacity-0"
+        }`}
+      >
+        <h4>Desarrollo de Aplicaciones Multiplataforma</h4>
+        <h6>IES Azarquiel</h6>
+        <p>Toledo, Spain</p>
       </div>
-      <div id="box03" className={`box ${lineOpacity.line03 > 0 ? 'box-visible' : 'opacity-0'}`}>
-      Caja3
+      <div
+        id="box03"
+        className={`box ${
+          lineOpacity.line03 > 0 ? "box-visible" : "opacity-0"
+        }`}
+      >
+        <h4>Data Analyst Jr.</h4>
+        <h6>ICSRed</h6>
+        <p>Toledo, Spain</p>
+        <p>Tech: Python, Numpy, Pandas, Plotly, Excel, Git, Azure Devops, Scrum.</p>
       </div>
       <svg
-      xmlns="http://www.w3.org/2000/svg"
-      id="ewMFQeD8cLd1"
-      viewBox="0 0 920 1500"
-      shapeRendering="geometricPrecision"
-      textRendering="geometricPrecision"
-    >
-      <line
-        x1="460"
-        y1="0"
-        x2="-460"
-        y2="0"
-        transform="matrix(.08344 0 0-1 161.065244 199.981971)"
-        fill="none"
-        stroke="#000"
-        strokeWidth="3"
-        className="line01"
-        style={{ opacity: lineOpacity.line01 }}
-      />
-      <line
-        x1="460"
-        y1="0"
-        x2="-460"
-        y2="0"
-        transform="matrix(.08344 0 0-1 640.635035 601.852178)"
-        fill="none"
-        stroke="#000"
-        strokeWidth="3"
-        className="line02"
-        style={{ opacity: lineOpacity.line02 }}
-      />
-      <line
-        x1="460"
-        y1="0"
-        x2="-460"
-        y2="0"
-        transform="matrix(.08344 0 0-1 260.930726 997.600332)"
-        fill="none"
-        stroke="#000"
-        strokeWidth="3"
-        className="line03"
-        style={{ opacity: lineOpacity.line03 }}
-      />
+        id="eR9PWMKTw8l1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 553 1256"
+        shapeRendering="geometricPrecision"
+        textRendering="geometricPrecision"
+      >
+        <line
+          x1="-1034.4559"
+          y1="0"
+          x2="-1930.309208"
+          y2="0.007919"
+          transform="matrix(.08344 0 0-1 161.065 199.982)"
+          fill="none"
+          stroke="#000"
+          strokeWidth="3"
+          className="line01"
+          style={{ opacity: lineOpacity.line01 }}
+        />
 
-      <path
-        d="M179.951453,199.981971q-13.003825,82.32523,201.059154,201.311958t198.988588,200.558249h20.567977"
-        className="theLine01"
-        fill="none"
-        stroke="#000"
-        strokeWidth="3"
-      />
-      <path
-        d="M620.207716,601.852178q-4.449639,100.341587-148.026292,198.66333t-151.707851,197.084824h-20.502432"
-        className="theLine02"
-        fill="none"
-        stroke="#000"
-        strokeWidth="3"
-      />
-      <path
-        d="M279.933122,997.600332q7.270008,73.69931,50.163056,102.779343t60.007013,28.486483"
-        className="theLine03"
-        fill="none"
-        stroke="#000"
-        strokeWidth="3"
-      />
+        <line
+          x1="-1050.275647"
+          y1="0"
+          x2="-1946.09784"
+          y2="0"
+          transform="matrix(.08344 0 0-1 640.635 601.852)"
+          fill="none"
+          stroke="#000"
+          strokeWidth="3"
+          className="line02"
+          style={{ opacity: lineOpacity.line02 }}
+        />
 
-      <path
-        d="M719.250478,0Q199.447641,59.845058,199.447641,199.981971c0,140.136913,401.11953,246.741408,401.11953,398.379718s-300.596032,237.815625-300.596032,403.29421s496.879208,297.284003,499.160323,397.814051"
-        className="theLine"
-        fill="none"
-        stroke="#000"
-        strokeWidth="4"
-      />
+        <line
+          x1="-1050.244532"
+          y1="0"
+          x2="-1946.09784"
+          y2="0"
+          transform="matrix(.08344 0 0-1 263.931 997.6)"
+          fill="none"
+          stroke="#000"
+          strokeWidth="3"
+          className="line03"
+          style={{ opacity: lineOpacity.line03 }}
+        />
+
+        <path
+          d="M55.951453,199.981971q-13.003825,82.32523,201.059154,201.311958t198.988588,200.558249h20.567977"
+          transform="translate(.000002 0)"
+          fill="none"
+          stroke="#000"
+          strokeWidth="3"
+          className="theLine01"
+        />
+
+        <path
+          d="M496.207716,601.852178q-4.449639,100.341587-148.026292,198.66333t-151.707851,197.084824h-20.502432"
+          transform="translate(.000002 0)"
+          fill="none"
+          stroke="#000"
+          strokeWidth="3"
+          className="theLine02"
+        />
+
+        <path
+          d="M155.933122,997.600332q7.270008,73.69931,50.163056,102.779343t60.007013,28.486483"
+          transform="translate(0 0.000001)"
+          fill="none"
+          stroke="#000"
+          strokeWidth="3"
+          className="theLine03"
+        />
+
+        <path
+          d="M375.955559,1.88772C259.218047,41.493189,75.750533,93.800016,75.447641,199.974079c0,140.131329,401,246.731577,401,398.363846s-300.506457,237.80615-300.506457,403.278142s288.535774,153.857888,290.816209,254.383931"
+          transform="translate(.000003 0.000002)"
+          fill="none"
+          stroke="#000"
+          strokeWidth="4"
+          className="theLine"
+        />
       </svg>
     </div>
-
   );
 }
 

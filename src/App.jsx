@@ -11,8 +11,9 @@ function App() {
       <NavBar />
       <div className="container">
         <SiteEntry />
-        <TempLine />
       </div>
+      <TempLine />
+
     </>
   )
 }

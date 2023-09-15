@@ -1,6 +1,7 @@
 svg {
-    width: 100%;
-    height: 100%;
+    width:65%;
+    height: 65%;
+    padding-bottom: 50vh;
 }
 
 svg path {
@@ -19,23 +20,44 @@ svg line {
 
 .box{
     position: absolute;
+    /*
+    border-radius: 1rem;border: 1px solid red;
+    border-radius: 1rem;
+    */
+    padding: 1rem 1.5rem;
+    max-width: 22rem;
+}
+
+.box h4{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.box h6{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.box h6{
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 #box01{
-    top: 5rem;
-    left: 5rem;
+    top: 14%;
+    left: 3rem;
+    /*background-color: rgba(255, 0, 0, 0.2);*/
 }
 
-
 #box02{
-    top: 50%;
+    top: 42%;
     right: 5rem;
 }
 
 
 #box03{
-    top: 70%;
-    left: 5rem;
+    top: 69%;
+    left: 20rem;
 }
 
 .line-visible {

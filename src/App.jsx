@@ -13,7 +13,12 @@ function App() {
         <SiteEntry />
       </div>
       <TempLine />
+      <div className="div w-screen h-screen">
 
+      </div>
+      <div className="div w-screen h-screen">
+
+</div>
     </>
   )
 }

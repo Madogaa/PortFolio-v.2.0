@@ -20,9 +20,11 @@ function TempLine() {
     });
 
     const animateLine = (line, start, end, totalLength) => {
-      let portion = 6
-      if (window.innerWidth < 600) portion = 2
-      const scrollY = window.scrollY - (window.innerHeight * portion / 7 );
+      let portion = 9
+      if (window.innerWidth > 600 && window.innerWidth < 1000) portion = 4
+      if (window.innerWidth > 500 && window.innerWidth < 600) portion = 0.5
+      if (window.innerWidth < 500) portion = 0.2
+      const scrollY = window.scrollY - (window.innerHeight * portion / 10 );
       let progress = 1 - (scrollY - start) / (end - start); // Calcular el progreso relativo a cada línea
       progress = Math.min(1, Math.max(0, progress));
       const currentOffset = totalLength * progress;

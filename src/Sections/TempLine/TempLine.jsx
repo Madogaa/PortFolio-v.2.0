@@ -23,7 +23,7 @@ function TempLine() {
       let portion = 9
       if (window.innerWidth > 600 && window.innerWidth < 1000) portion = 4
       if (window.innerWidth > 500 && window.innerWidth < 600) portion = 0.5
-      if (window.innerWidth < 500) portion = -1
+      if (window.innerWidth < 500) portion = -1;
       const scrollY = window.scrollY - (window.innerHeight * portion / 10 );
       let progress = 1 - (scrollY - start) / (end - start); // Calcular el progreso relativo a cada línea
       progress = Math.min(1, Math.max(0, progress));

@@ -16,8 +16,8 @@ function CloudSphere() {
       0.1,
       1000
     );
-    const renderer = new THREE.WebGLRenderer();
-    scene.background = new THREE.Color(0xffffff);
+    const renderer = new THREE.WebGLRenderer({alpha:true});
+    scene.background = null;
     renderer.setSize(window.innerWidth, window.innerHeight);
     containerRef.current.appendChild(renderer.domElement);
 

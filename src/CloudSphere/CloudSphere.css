@@ -1,0 +1,42 @@
+#cloud-sphere{
+
+}
+
+.text-mesh {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Establece el tamaño aumentado cuando se hace hover */
+.text-mesh:hover {
+  transform: scale(1.8);
+}
+
+@media ( min-width: 1600px) and ( max-width: 1920px) {
+canvas{
+  height: 900px !important;
+  width: 900px !important;
+}
+}
+
+
+@media ( min-width: 1200px) and ( max-width: 1600px) {
+  canvas{
+    height: 750px !important;
+    width: 750px !important;
+  }
+  }
+
+
+  @media ( min-width: 600px) and ( max-width: 1200px) {
+    canvas{
+      height: 670px !important;
+      width: 670px !important;
+    }
+    }
+
+    @media ( max-width: 600px) {
+      canvas{
+        height: 500px !important;
+        width: 500px !important;
+      }
+      }

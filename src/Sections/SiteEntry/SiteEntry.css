@@ -1,18 +1,136 @@
-.entry{
-    height: 92vh;
-    width: 100%;
+.sizereg {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.entry h1{
-
-    font-size: 4rem;
-    line-height: 6rem;
-    font-family: 'Gilroy-bold' , sans-serif,'Gill Sans', 'Gill Sans MT', Calibri;
+.entry {
+  height: 100%;
 }
 
-.entry p{
-    padding-top: 1rem;
-    max-width: 60ch;
-    font-weight: 600;
-    font-size: 1.15rem;
+.lottie {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.entry h1 {
+  font-size: 4rem;
+  line-height: 6rem;
+}
+
+.entry p {
+  padding-top: 1rem;
+  max-width: 60ch;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+/* Media query para tamaños menores a 'md' */
+@media (min-width: 750px) and (max-width: 1280px) {
+  .entry {
+    flex-direction: column;
+    /* Cambia la dirección del flex a columna */
+    align-items: center;
+    /* Alinea el contenido al centro verticalmente */
+  }
+
+  /* Ajusta los estilos según tus necesidades para la disposición vertical */
+  .boujee-text {
+    font-size: 20px;
+    /* Reduce el tamaño del texto */
+    margin-bottom: 10px;
+    /* Espacio entre el título y el párrafo */
+  }
+}
+
+@media (min-width: 630px) and (max-width: 750px) {
+
+  .texto {
+    text-align: center;
+  }
+
+  .entry {
+    flex-direction: column;
+    /* Cambia la dirección del flex a columna */
+    align-items: center;
+    /* Alinea el contenido al centro verticalmente */
+  }
+
+  /* Ajusta los estilos según tus necesidades para la disposición vertical */
+  .boujee-text {
+    font-size: 20px;
+    /* Reduce el tamaño del texto */
+    margin-bottom: 10px;
+    /* Espacio entre el título y el párrafo */
+  }
+}
+
+@media (min-width: 490px) and (max-width: 630px) {
+
+  .texto {
+    text-align: center;
+  }
+
+  .texto h1 {
+    line-height: 4rem;
+    font-size: 3rem;
+  }
+
+  .texto p {
+    font-size: 1.1rem;
+  }
+
+  .entry {
+    flex-direction: column;
+    /* Cambia la dirección del flex a columna */
+    align-items: center;
+    /* Alinea el contenido al centro verticalmente */
+  }
+
+  /* Ajusta los estilos según tus necesidades para la disposición vertical */
+  .boujee-text {
+    font-size: 20px;
+    /* Reduce el tamaño del texto */
+    margin-bottom: 10px;
+    /* Espacio entre el título y el párrafo */
+  }
+}
+
+@media (max-width: 490px) {
+  .entry .imagen {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  .texto h1 {
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+
+  .entry {
+    flex-direction: column;
+    /* Cambia la dirección del flex a columna */
+    align-items: center;
+    /* Alinea el contenido al centro verticalmente */
+  }
+
+  /* Ajusta los estilos según tus necesidades para la disposición vertical */
+  .boujee-text {
+    font-size: 20px;
+    /* Reduce el tamaño del texto */
+    margin-bottom: 10px;
+    /* Espacio entre el título y el párrafo */
+  }
 }

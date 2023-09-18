@@ -18,9 +18,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .boujee-text {
+  font-family: 'Gilroy-bold', sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri;
   --bg-size: 400%;
   --color-one: #ff7336;
   --color-two: #fbd336;

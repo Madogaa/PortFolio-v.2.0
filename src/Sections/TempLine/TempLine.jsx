@@ -19,7 +19,7 @@ function TempLine() {
       line.dataset.totalLength = totalLength; // Almacena la longitud total en un atributo personalizado
     });
 
-    const animateLine = (line, start, end, totalLength) => {
+    const animateLine = (line, start, end, totalLength) => { // Ajusta esta velocidad según tus preferencias
       let portion = 9
       if (window.innerWidth > 600 && window.innerWidth < 1000) portion = 4
       if (window.innerWidth > 500 && window.innerWidth < 600) portion = 0.5
@@ -91,7 +91,7 @@ function TempLine() {
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center w-full ">
+    <div className="mb-20 relative flex justify-center items-center w-full ">
       <div
         id="box01"
         className={`box ${

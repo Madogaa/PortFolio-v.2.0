@@ -7,9 +7,11 @@ import "./CloudSphere.css";
 
 function CloudSphere() {
   const containerRef = useRef(null);
+  const isDesktop = /Windows NT|Macintosh/.test(navigator.userAgent)
   const isDark = isDarkModeEnabled();
+  let textColor = 0x000000;
+  if(!isDesktop) textColor = isDark ? 0xffffff : 0x000000;
 
-  const textColor = isDark ? 0xffffff : 0x000000;
   useEffect(() => {
 
     const scene = new THREE.Scene();

@@ -7,8 +7,11 @@ import "./CloudSphere.css";
 
 function CloudSphere() {
   const containerRef = useRef(null);
+  const isDark = isDarkModeEnabled();
 
+  const textColor = isDark ? 0xffffff : 0x000000;
   useEffect(() => {
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       62,
@@ -102,6 +105,14 @@ function CloudSphere() {
     animate();
   }, []);
 
+  function isDarkModeEnabled() {
+    // Verifica si el sistema operativo o el navegador están en modo oscuro
+    return (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
+  }
+
   function createTextAtPole(text, radius, polarAngle, group, font, textMaterials, textObjects) {
     const textGeometry = new TextGeometry(text, {
       font: font,
@@ -109,7 +120,7 @@ function CloudSphere() {
       height: 0.1,
     });
 
-    const textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+    const textMaterial = new THREE.MeshBasicMaterial({ color: textColor });
     const textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
     const x = 0;
@@ -131,7 +142,7 @@ function CloudSphere() {
         height: 0.1,
       });
 
-      const textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+      const textMaterial = new THREE.MeshBasicMaterial({ color: textColor });
       const textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
       const angle = (index / technologies.length) * Math.PI * 2;

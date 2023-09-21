@@ -20,7 +20,7 @@ function TempLine() {
     });
 
     const animateLine = (line, start, end, totalLength) => { // Ajusta esta velocidad según tus preferencias
-      let portion = 9
+      let portion = 8
       if (window.innerWidth > 600 && window.innerWidth < 1000) portion = 4
       if (window.innerWidth > 500 && window.innerWidth < 600) portion = 0.5
       if (window.innerWidth < 500) portion = -1.5;
@@ -91,7 +91,7 @@ function TempLine() {
   }, []);
 
   return (
-    <div className="mb-20 relative flex justify-center items-center w-full ">
+    <div className="temp-line mb-20 relative flex justify-center items-center w-full ">
       <div
         id="box01"
         className={`box ${

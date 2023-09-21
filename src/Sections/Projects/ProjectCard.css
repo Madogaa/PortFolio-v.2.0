@@ -1,0 +1,57 @@
+
+
+.react-icons .orange svg path{
+    stroke: orange;
+}
+
+.react-icons .green svg path{
+    stroke: green;
+}
+
+.react-icons .red svg path{
+
+    stroke: red;
+}
+
+.react-icons .red svg path:nth-child(2){
+    stroke-width: 0.3;
+
+}
+
+
+.react-icons .orange svg path:nth-child(2){
+    stroke-width: 0.3;
+
+}
+
+.daily-mock{
+    background-image: url('/DailyMockUp.png');
+    background-size: cover; /* Asegura que la imagen cubra todo el elemento */
+    background-position: center center; /* Coloca la imagen en el centro horizontal y verticalmente */
+    background-repeat: no-repeat;
+}
+.dotshare-mock{
+    background-image: url('/DotshareMockUp.png');
+    background-size: cover; /* Asegura que la imagen cubra todo el elemento */
+    background-position: center center; /* Coloca la imagen en el centro horizontal y verticalmente */
+    background-repeat: no-repeat;
+}
+
+.shopy-mock{
+    background-image: url('/ShopycheepMockUp.png');
+    background-size: cover; /* Asegura que la imagen cubra todo el elemento */
+    background-position: center center; /* Coloca la imagen en el centro horizontal y verticalmente */
+    background-repeat: no-repeat;
+}
+.bg-green-200-t{
+    background-color: rgba(187, 247, 208,0.9)
+}
+
+.bg-red-200-t{
+    background-color: rgba(254, 202, 202,0.9)
+}
+
+
+.bg-orange-200-t{
+    background-color: rgba(254, 215, 170,0.9)
+}

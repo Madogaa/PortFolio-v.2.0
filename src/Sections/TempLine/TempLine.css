@@ -1,10 +1,10 @@
-svg {
-    width:65%;
-    height: 65%;
+.temp-line svg {
+    width:55%;
+    height: 55%;
 
 }
 
-svg path {
+.temp-line svg path {
     stroke-dasharray: 0;
     stroke-dashoffset: 0;
     stroke-width: 4;
@@ -12,7 +12,7 @@ svg path {
     fill: none;
 }
 
-svg line {
+.temp-line svg line {
     opacity: 0;
     fill: none;
     transition: opacity 0.2s ease;
@@ -77,15 +77,15 @@ svg line {
     stroke: orange;
 }
 
-.theLine01 {
+.temp-line .theLine01 {
     stroke: red;
 }
 
-.theLine02 {
+.temp-line .theLine02 {
     stroke: green;
 }
 
-.theLine03 {
+.temp-line .theLine03 {
     stroke: orange;
 }
 
@@ -137,7 +137,7 @@ svg line {
   }
 
   @media ( min-width: 900px) and ( max-width: 1300px) {
-    svg{
+    .temp-line svg{
         width: 100%;
         height: 100%;
     }
@@ -159,7 +159,7 @@ svg line {
 
 
   @media ( min-width: 300px) and ( max-width: 900px) {
-    svg{
+    .temp-line svg{
         width: 100%;
         height: 100%;
     }

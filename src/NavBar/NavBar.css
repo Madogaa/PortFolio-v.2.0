@@ -1,14 +1,15 @@
-.navbar{
-    position: sticky;
-    height: 8vh;
-    background-color: #111;
-    color: var(--text-white);
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 8vh;
+  background-color: #111;
+  color: var(--text-white);
 }
 
-.navbar ul li a{
-    font-weight: 600;
+.navbar ul li a {
+  font-weight: 600;
 }
 
-.navbar ul li:hover{
+.navbar ul li:hover {
   transform: scale(1.20)
 }

@@ -4,7 +4,7 @@ import { BiDetail } from "react-icons/bi";
 import { AiOutlineCheck } from "react-icons/ai";
 import { GoCodeReview } from "react-icons/go";
 import { MdMilitaryTech } from "react-icons/md";
-
+import { BiLogoGithub } from "react-icons/bi";
 function ProjectCard({ item, indice }) {
   const [activeContent, setActiveContent] = useState("check");
   const paletes = [
@@ -29,7 +29,7 @@ function ProjectCard({ item, indice }) {
   ];
 
   const contentMap = {
-    check: <div className={`w-full h-full ${item.mockup}`}></div>,
+    check: <div className={`w-full h-72 ${item.mockup}`}></div>,
     detail: (
       <>
         <div className="flex justify-between items-center px-6 py-3">
@@ -57,9 +57,45 @@ function ProjectCard({ item, indice }) {
       </div>
     ),
     militaryTech: (
-      <div className="contenedor">
-        {/* Aquí coloca el contenido relacionado con el enlace Military Tech */}
-        {/* Por ejemplo: <p>Tecnologías militares utilizadas</p> */}
+      <div className="m-auto px-6 py-6">
+        <h2 className="text-lg font-semibold pb-2">Front-end</h2>
+        <div className="w-full flex flex-wrap gap-4">
+          {item.technologies.frontEnd.map((tech, index) => (
+            <p
+              key={index}
+              className={`w-fit px-2 py-1 border-2 rounded-md ${paletes[indice].borderColor} ${paletes[indice].backgroundColor}`}
+            >
+              {tech}
+            </p>
+          ))}
+          <a
+            href={item.frontGit}
+            target="_blank"
+            rel="noreferrer"
+            className={`w-fit px-2 py-1 border-2 rounded-md ${paletes[indice].borderColor} ${paletes[indice].backgroundColor}`}
+          >
+            <BiLogoGithub size={24} />
+          </a>
+        </div>
+        <h2 className="text-lg font-semibold py-2">Back-end</h2>
+        <div className="w-full flex flex-wrap gap-4">
+          {item.technologies.backEnd.map((tech, index) => (
+            <p
+              key={index}
+              className={`w-fit px-2 py-1 border-2 rounded-md ${paletes[indice].borderColor} ${paletes[indice].backgroundColor}`}
+            >
+              {tech}
+            </p>
+          ))}
+          <a
+            href={item.backGit}
+            target="_blank"
+            rel="noreferrer"
+            className={`w-fit px-2 py-1 border-2 rounded-md ${paletes[indice].borderColor} ${paletes[indice].backgroundColor}`}
+          >
+            <BiLogoGithub size={24} />
+          </a>
+        </div>
       </div>
     ),
   };
@@ -70,14 +106,24 @@ function ProjectCard({ item, indice }) {
 
   return (
     <div
-      className={`react-icons flex flex-col relative w-full h-96 border rounded-lg overflow-hidden border-2 ${paletes[indice].borderColor} ${paletes[indice].textColor}`}
+      className={`react-icons flex flex-col relative w-full border rounded-lg overflow-hidden border-2 ${paletes[indice].borderColor} ${paletes[indice].textColor}`}
     >
-      <a href={item.link} className={`p-4 ${paletes[indice].backgroundColor}  `}>
+      <a
+        href={item.link}
+        target="_blank"
+        rel="noreferrer"
+        className={`p-4 ${paletes[indice].backgroundColor}  `}
+      >
         <h3 className="font-semibold ">{item.title}</h3>
         <p>2023</p>
       </a>
 
-      <a href={item.link} className="flex-grow flex flex-col justify-around ">
+      <a
+        href={item.link}
+        target="_blank"
+        rel="noreferrer"
+        className="flex-grow flex flex-col justify-around "
+      >
         {contentMap[activeContent]}
       </a>
 

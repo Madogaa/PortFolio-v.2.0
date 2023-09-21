@@ -26,6 +26,8 @@ function Projects() {
       backEndDesc: "Spring",
       mockup: "dotshare-mock",
       link: "https://sc.madoga.dev",
+      frontGit: "https://github.com/Madogaa/TFG-Frontend",
+      backGit: "https://github.com/Madogaa/TFG-Backend",
       description:
         "Dotshare es una demo de una red social de comparticion de apuntes, donde podrás crear nuevas relaciones de amistad, compartir y enriquecer tu red con datos de interes, optimizando el tiempo de estudio y de busqueda de material util para el estudio.",
     },
@@ -50,6 +52,8 @@ function Projects() {
       backEndDesc: "Node",
       mockup: "daily-mock",
       link: "https://day.madoga.dev",
+      frontGit: "https://github.com/Madogaa/Calendar",
+      backGit: "https://github.com/Madogaa/DailyApi-Node",
       description:
         "Daily es un calendario donde podrás crear, borrar y personalizar tus eventos, para tener una mayor organización y optimización de tus tareas.",
     },
@@ -68,6 +72,8 @@ function Projects() {
       backEndDesc: "Django",
       mockup: "shopy-mock",
       link: "https://sc.madoga.dev",
+      frontGit: "https://github.com/Madogaa/Shopycheep",
+      backGit: "https://github.com/Madogaa/ShopycheepAPI",
       description:
         "Shopycheep es un comparador de precios donde podrás ver los productos disponibles en cada supermercado. Además podrás buscar productos y ver donde se encuentran más baratos para optimizar tus compras y salvar tu bolsillo.",
     },
@@ -82,6 +88,8 @@ function Projects() {
         ))}
         <div className="col-span-3 text-center">
           <a
+            target="_blank"
+            rel="noreferrer"
             href="https://github.com/Madogaa"
             className="bg-orange-200-t py-3 px-4 rounded-md border-orange-300 border-2 font-semibold text-orange-500"
           >

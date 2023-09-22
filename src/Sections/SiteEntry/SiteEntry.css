@@ -1,4 +1,5 @@
 .sizereg {
+  margin-top: 8vh;
   height: 92vh;
   width: 100%;
   display: flex;
@@ -47,7 +48,10 @@
 }
 
 @media (min-width: 630px) and (max-width: 750px) {
-
+  .entry .imagen {
+    width: 23rem;
+    height: 23rem;
+  }
   .texto {
     text-align: center;
   }
@@ -68,7 +72,10 @@
 }
 
 @media (min-width: 490px) and (max-width: 630px) {
-
+  .entry .imagen {
+    width: 22rem;
+    height: 22rem;
+  }
   .texto {
     text-align: center;
   }
@@ -98,10 +105,44 @@
   }
 }
 
-@media (max-width: 490px) {
+@media (min-width: 350px) and (max-width: 490px) {
   .entry .imagen {
     width: 20rem;
     height: 20rem;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  .texto h1 {
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+
+  .entry {
+    flex-direction: column;
+    /* Cambia la dirección del flex a columna */
+    align-items: center;
+    /* Alinea el contenido al centro verticalmente */
+  }
+
+  /* Ajusta los estilos según tus necesidades para la disposición vertical */
+  .boujee-text {
+    /* Reduce el tamaño del texto */
+    margin-bottom: 10px;
+    /* Espacio entre el título y el párrafo */
+  }
+}
+
+@media (max-width: 350px) {
+  .entry .imagen {
+    width: 17rem;
+    height: 17rem;
   }
 
   .texto {

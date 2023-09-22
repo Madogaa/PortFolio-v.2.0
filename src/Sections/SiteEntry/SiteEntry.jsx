@@ -3,7 +3,7 @@ import "./SiteEntry.css";
 function SiteEntry() {
   return (
     <div className="sizereg">
-    <div className="entry flex justify-center gap-10 md:justify-around items-center">
+    <div className="entry flex justify-center gap-4 md:gap-10 md:justify-around items-center">
     <div className="imagen xl:order-last h-96 w-96 bg-black rounded-full"></div>
       <div className="texto xl:order-first">
         <h1 className="boujee-text">

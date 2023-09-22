@@ -80,13 +80,13 @@ function Projects() {
   ];
 
   return (
-    <div className="w-full m-auto flex flex-col gap-28">
+    <div className="w-full m-auto flex flex-col gap-8 sm:gap-16 md:gap-20 xl:gap-28">
       <h1 className="boujee-text text-center">Personal Projects</h1>
-      <div className="w-full grid grid-cols-3 gap-10">
+      <div className="w-full flex flex-wrap justify-center gap-10">
         {projects.map((project, index) => (
           <ProjectCard key={index} indice={index} item={project} />
         ))}
-        <div className="col-span-3 text-center">
+        <div className="w-full text-center">
           <a
             target="_blank"
             rel="noreferrer"

@@ -20,7 +20,7 @@ function TempLine() {
     });
 
     const animateLine = (line, start, end, totalLength) => { // Ajusta esta velocidad según tus preferencias
-      let portion = 8
+      let portion = 6.5
       if (window.innerWidth > 600 && window.innerWidth < 1000) portion = 4
       if (window.innerWidth > 500 && window.innerWidth < 600) portion = 0.5
       if (window.innerWidth < 500) portion = -1.5;

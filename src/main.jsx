@@ -1,10 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import BackgroundBlur from "./Styling/BackgroundBlur"
+import App from "./App.jsx";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <div className="flex flex-col justify-center items-center relative isolate">
     <App />
-  ,
-)
+    <BackgroundBlur />
+  </div>
+);

@@ -15,7 +15,7 @@ function App() {
         <SiteEntry />
       </div>
       <TempLine />
-      <div className="container flex w-screen h-screen">
+      <div className="container flex w-screen min-h-screen">
         <Projects />
       </div>
 

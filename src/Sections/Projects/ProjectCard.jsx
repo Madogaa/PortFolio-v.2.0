@@ -9,21 +9,21 @@ function ProjectCard({ item, indice }) {
   const [activeContent, setActiveContent] = useState("check");
   const paletes = [
     {
-      backgroundColor: "bg-green-200-t",
-      borderColor: "border-green-300",
-      textColor: "text-green-400",
+      backgroundColor: "bg-green-300",
+      borderColor: "border-green-400",
+      textColor: "text-green-500",
       logoColor: "green",
     },
     {
-      backgroundColor: "bg-red-200-t",
-      borderColor: "border-red-300",
-      textColor: "text-red-400",
+      backgroundColor: "bg-red-300",
+      borderColor: "border-red-400",
+      textColor: "text-red-500",
       logoColor: "red",
     },
     {
-      backgroundColor: "bg-orange-200-t",
-      borderColor: "border-orange-300",
-      textColor: "text-orange-400",
+      backgroundColor: "bg-orange-300",
+      borderColor: "border-orange-400",
+      textColor: "text-orange-500",
       logoColor: "orange",
     },
   ];
@@ -106,7 +106,7 @@ function ProjectCard({ item, indice }) {
 
   return (
     <div
-      className={`react-icons flex flex-col relative w-full border rounded-lg overflow-hidden border-2 ${paletes[indice].borderColor} ${paletes[indice].textColor}`}
+      className={`react-icons project flex flex-col relative border rounded-lg overflow-hidden border-2 ${paletes[indice].borderColor} ${paletes[indice].textColor}`}
     >
       <a
         href={item.link}
@@ -128,7 +128,7 @@ function ProjectCard({ item, indice }) {
       </a>
 
       <div
-        className={`footer w-full p-2 gap-10 flex justify-center ${paletes[indice].backgroundColor}`}
+        className={`footer w-full p-2 flex justify-around ${paletes[indice].backgroundColor}`}
       >
         <button className="px-5" onClick={() => handleLinkClick("check")}>
           <AiOutlineCheck size={32} />

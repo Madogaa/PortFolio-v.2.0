@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .entry h1 {
@@ -40,7 +40,6 @@
 
   /* Ajusta los estilos según tus necesidades para la disposición vertical */
   .boujee-text {
-    font-size: 20px;
     /* Reduce el tamaño del texto */
     margin-bottom: 10px;
     /* Espacio entre el título y el párrafo */
@@ -62,7 +61,6 @@
 
   /* Ajusta los estilos según tus necesidades para la disposición vertical */
   .boujee-text {
-    font-size: 20px;
     /* Reduce el tamaño del texto */
     margin-bottom: 10px;
     /* Espacio entre el título y el párrafo */
@@ -93,7 +91,7 @@
 
   /* Ajusta los estilos según tus necesidades para la disposición vertical */
   .boujee-text {
-    font-size: 20px;
+
     /* Reduce el tamaño del texto */
     margin-bottom: 10px;
     /* Espacio entre el título y el párrafo */
@@ -128,7 +126,6 @@
 
   /* Ajusta los estilos según tus necesidades para la disposición vertical */
   .boujee-text {
-    font-size: 20px;
     /* Reduce el tamaño del texto */
     margin-bottom: 10px;
     /* Espacio entre el título y el párrafo */

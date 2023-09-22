@@ -7,7 +7,7 @@ function NavBar() {
         <div className="w-14">
             <img src="/MLogo-Transparent.png" alt="LOGO" />
         </div>
-      <ul className="flex gap-10">
+      <ul className="flex gap-4 sm:gap-10">
         <li>
             <a href="">Home</a>
         </li>

@@ -26,7 +26,7 @@ function Divider() {
         <use xlinkHref="#gentle-wave" x="50" y="0" fill="green" />
       </g>
       <g className="parallax3">
-        <use xlinkHref="#gentle-wave" x="50" y="9" fill="#fff" />
+        <use xlinkHref="#gentle-wave" x="50" y="9" fill="orange" />
       </g>
       <g className="parallax4">
         <use xlinkHref="#gentle-wave" x="50" y="6" fill="rgba(50, 50, 50)" />

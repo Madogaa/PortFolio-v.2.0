@@ -6,6 +6,7 @@ import "./index.css";
 import { DataProvider } from "./Context/DataContext";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Analytics } from '@vercel/analytics/react';
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -25,5 +26,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <App />
       <BackgroundBlur />
     </div>
+    <Analytics />
   </DataProvider>
 );

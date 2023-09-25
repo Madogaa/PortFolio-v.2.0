@@ -23,7 +23,7 @@
 /* Estilo para ocultar la lista desplegable en pantallas pequeñas */
 
 
-@media (max-width:700px){
+@media (max-width:820px){
   .navbar{
     flex-wrap: wrap;
     min-height: 8vh;

@@ -19,8 +19,8 @@
 
 @media (min-width: 900px) and (max-width: 1600px) {
   canvas {
-    height: 750px !important;
-    width: 750px !important;
+    height: 700px !important;
+    width: 700px !important;
   }
 }
 
@@ -32,7 +32,14 @@
   }
 }
 
-@media (min-width: 500px) and (max-width: 700px) {
+@media (min-width: 600px) and (max-width: 700px) {
+  canvas {
+    height: 590px !important;
+    width: 590px !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
   canvas {
     height: 490px !important;
     width: 490px !important;
@@ -40,22 +47,26 @@
 }
 
 @media (min-width: 400px) and (max-width: 500px) {
+
   canvas {
-    height: 390px !important;
-    width: 390px !important;
+    height: 500px !important;
+
+    width: 100% !important;
   }
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
   canvas {
-    height: 290px !important;
-    width: 290px !important;
+    height: 400px !important;
+    width: 100% !important;
   }
 }
 
-@media(max-width: 300px) {
+
+@media (max-width: 300px) {
   canvas {
-    height: 200px !important;
-    width: 200px !important;
+    height: 300px !important;
+
+    width: 100% !important;
   }
 }

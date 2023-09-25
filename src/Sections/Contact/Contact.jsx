@@ -66,7 +66,7 @@ function Contact() {
         onSubmit={(e) => handleSubmit(e)}
         className="text-shadow grid grid-cols-12 gap-6 font-semibold "
       >
-        <h1 className="text-shadow text-center col-span-12 font-bold text-5xl sm:text-7xl mb-16">
+        <h1 className="text-shadow text-center col-span-12 font-bold text-5xl md:text-7xl mb-16">
           {translations[language].title}
         </h1>
         <p className="col-span-4">{translations[language].emailLabel}</p>

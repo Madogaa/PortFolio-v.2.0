@@ -29,14 +29,14 @@ canvas{
 
   @media ( min-width: 600px) and ( max-width: 1200px) {
     canvas{
-      height: 670px !important;
-      width: 670px !important;
+      height: 570px !important;
+      width: 570px !important;
     }
     }
 
     @media ( max-width: 600px) {
       canvas{
-        height: 500px !important;
-        width: 500px !important;
+        height: 350px !important;
+        width: 350px !important;
       }
       }

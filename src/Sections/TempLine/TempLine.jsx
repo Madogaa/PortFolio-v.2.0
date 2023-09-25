@@ -2,11 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./TempLine.css";
 
 function TempLine() {
+  const counterElement = document.querySelector('.counter');
+
   const [lineOpacity, setLineOpacity] = useState({
     line01: 0,
     line02: 0,
     line03: 0,
   });
+
+  const [year, setYear] = useState(null);
+  const [componentMounted, setComponentMounted] = useState(false);
+
   useEffect(() => {
     const lines = document.querySelectorAll(
       ".theLine, .theLine01, .theLine02, .theLine03"
@@ -19,12 +25,25 @@ function TempLine() {
       line.dataset.totalLength = totalLength; // Almacena la longitud total en un atributo personalizado
     });
 
-    const animateLine = (line, start, end, totalLength) => { // Ajusta esta velocidad según tus preferencias
-      let portion = 6.5
-      if (window.innerWidth > 600 && window.innerWidth < 1000) portion = 4
-      if (window.innerWidth > 500 && window.innerWidth < 600) portion = 0.5
-      if (window.innerWidth < 500) portion = -1.5;
-      const scrollY = window.scrollY - (window.innerHeight * portion / 10 );
+    const animateLine = (line, start, end, totalLength) => {
+      const screenSize = window.innerWidth;
+      const speedMap = {
+        default: 6.5,
+        600_1000: 4,
+        500_600: 0.5,
+        below_500: -1.5,
+      };
+
+      let portion = speedMap.default;
+
+      if (screenSize > 600 && screenSize < 1000) {
+        portion = speedMap[600_1000];
+      } else if (screenSize > 500 && screenSize < 600) {
+        portion = speedMap[500_600];
+      } else if (screenSize < 500) {
+        portion = speedMap.below_500;
+      }
+      const scrollY = window.scrollY - (window.innerHeight * portion) / 10;
       let progress = 1 - (scrollY - start) / (end - start); // Calcular el progreso relativo a cada línea
       progress = Math.min(1, Math.max(0, progress));
       const currentOffset = totalLength * progress;
@@ -32,19 +51,42 @@ function TempLine() {
       line.style.strokeDashoffset = currentOffset;
 
       setLineOpacity((prevOpacity) => {
-        if (line == line01) {
+        const updatedOpacity = { ...prevOpacity };
+
+        if (line == line01 && progress < 1 && updatedOpacity.line01 === 0) {
+          return { ...prevOpacity, line01: progress < 1 ? 1 : 0 };
+        } else if (
+          line == line01 &&
+          progress === 1 &&
+          updatedOpacity.line01 === 1
+        ) {
           return { ...prevOpacity, line01: progress < 1 ? 1 : 0 };
         }
-        if (line == line02) {
+        if (line == line02 && progress < 1 && updatedOpacity.line02 === 0) {
+          return { ...prevOpacity, line02: progress < 1 ? 1 : 0 };
+        } else if (
+          line == line02 &&
+          progress === 1 &&
+          updatedOpacity.line02 === 1
+        ) {
           return { ...prevOpacity, line02: progress < 1 ? 1 : 0 };
         }
-        if (line == line03) {
+        if (line == line03 && progress < 1 && updatedOpacity.line03 === 0) {
+          return { ...prevOpacity, line03: progress < 1 ? 1 : 0 };
+        } else if (
+          line == line03 &&
+          progress === 1 &&
+          updatedOpacity.line03 === 1
+        ) {
           return { ...prevOpacity, line03: progress < 1 ? 1 : 0 };
         }
+
         return prevOpacity;
       });
 
-      //console.log(line.className.baseVal + "/" + progress)
+
+
+      setComponentMounted(true);
     };
 
     const path = document.querySelector(".theLine");
@@ -90,8 +132,34 @@ function TempLine() {
     };
   }, []);
 
+  useEffect(() => {
+    if(!componentMounted) return
+    if (lineOpacity.line01 == 1) setYear("2019");
+    else if (lineOpacity.line01 < 1) setYear(null);
+  }, [lineOpacity.line01]);
+
+  useEffect(() => {
+    if(!componentMounted) return
+    if (lineOpacity.line02 == 1) setYear("2021");
+    else if (lineOpacity.line02 < 1) setYear("2019");
+  }, [lineOpacity.line02]);
+
+  useEffect(() => {
+    if(!componentMounted) return
+    if (lineOpacity.line03 == 1) setYear("2023");
+    else if (lineOpacity.line03 < 1) setYear("2021");
+
+  }, [lineOpacity.line03]);
+
   return (
-    <div className="temp-line mb-20 relative flex justify-center items-center w-full ">
+    <div
+      id="time-line"
+      className="relative h-full temp-line mb-20 flex flex-col justify-center items-center w-full "
+    >
+
+        <h1 className={`counter text-8xl font-bold -z-50  ${year ? "opacity-20" : "opacity-0"}`}>{year}</h1>
+
+
       <div
         id="box01"
         className={`box ${
@@ -121,7 +189,9 @@ function TempLine() {
         <h4>Data Analyst Jr.</h4>
         <h6>ICSRed</h6>
         <p>Toledo, Spain</p>
-        <p>Tech: Python, Numpy, Pandas, Plotly, Excel, Git, Azure Devops, Scrum.</p>
+        <p>
+          Tech: Python, Numpy, Pandas, Plotly, Excel, Git, Azure Devops, Scrum.
+        </p>
       </div>
       <svg
         id="eR9PWMKTw8l1"

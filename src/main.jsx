@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <div className="flex flex-col justify-center items-center relative isolate">
+  <div className="flex flex-col justify-center items-center relative isolate w-full">
     <App />
     <BackgroundBlur />
   </div>

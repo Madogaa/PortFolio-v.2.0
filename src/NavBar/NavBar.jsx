@@ -4,21 +4,21 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <div className="navbar w-full flex justify-around items-center">
-        <div className="w-14">
-            <img src="/MLogo-Transparent.png" alt="LOGO" />
+        <div>
+            <img className="w-14" src="/MLogo-Transparent.png" alt="LOGO" />
         </div>
       <ul className="flex gap-4 sm:gap-10">
         <li>
-            <a href="">Home</a>
+            <a href="#entry" >Home</a>
         </li>
         <li>
-            <a href="">About</a>
+            <a href="#time-line">About</a>
         </li>
         <li>
-            <a href="">Projects</a>
+            <a href="#projects">Projects</a>
         </li>
         <li>
-            <a href="">Contact</a>
+            <a href="#tech">Skills</a>
         </li>
       </ul>
     </div>

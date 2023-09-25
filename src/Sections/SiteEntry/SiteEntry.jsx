@@ -9,7 +9,7 @@ function SiteEntry() {
     </div>
       <div className="texto xl:order-first">
         <h1 className="boujee-text">
-          It's Mario! <br /> Full Stack Developer
+          It&apos;s Mario! <br /> Full Stack Developer
         </h1>
         <p>
           Apasionado del proceso resolutivo de retos complejos e innovadores.

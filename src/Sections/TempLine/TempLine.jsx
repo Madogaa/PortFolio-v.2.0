@@ -166,7 +166,7 @@ function TempLine() {
           lineOpacity.line01 > 0 ? "box-visible" : "opacity-0"
         }`}
       >
-        <h4>Bachillerato Cientifico</h4>
+        <h4>Bachillerato Científico</h4>
         <h6>IES Juanelo Turriano</h6>
         <p>Toledo, Spain</p>
       </div>

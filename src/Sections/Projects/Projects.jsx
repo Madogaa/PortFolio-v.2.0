@@ -80,7 +80,7 @@ function Projects() {
   ];
 
   return (
-    <div className="w-full m-auto flex flex-col gap-8 sm:gap-16 md:gap-20 xl:gap-28">
+    <div className="w-full pt-28 m-auto flex flex-col gap-8 sm:gap-10 md:gap-20 xl:gap-28">
       <h1 className="boujee-text text-center">Personal Projects</h1>
       <div className="w-full flex flex-wrap justify-center gap-10">
         {projects.map((project, index) => (

@@ -15,3 +15,37 @@
 .navbar ul li:hover {
   transform: scale(1.20)
 }
+
+.navbar-toggler{
+  display: none;
+}
+
+/* Estilo para ocultar la lista desplegable en pantallas pequeñas */
+
+
+@media (max-width:700px){
+  .navbar{
+    flex-wrap: wrap;
+    min-height: 8vh;
+    height: auto;
+  }
+
+  .navbar-nav{
+    width: 100vw;
+    padding: 2rem 0;
+    flex-direction: column;
+  }
+  .navbar-toggler{
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
+
+  /* Estilo para mostrar la lista desplegable cuando el botón se active */
+  .navbar-toggler.active + .navbar-collapse {
+    display: block;
+    outline: white;
+  }
+}

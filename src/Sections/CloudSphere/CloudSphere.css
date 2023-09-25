@@ -1,6 +1,4 @@
-#cloud-sphere{
-
-}
+#cloud-sphere {}
 
 .text-mesh {
   transition: transform 0.2s ease-in-out;
@@ -11,32 +9,53 @@
   transform: scale(1.8);
 }
 
-@media ( min-width: 1600px) and ( max-width: 1920px) {
-canvas{
-  height: 900px !important;
-  width: 900px !important;
-}
+@media (min-width: 1600px) and (max-width: 1920px) {
+  canvas {
+    height: 900px !important;
+    width: 900px !important;
+  }
 }
 
 
-@media ( min-width: 1200px) and ( max-width: 1600px) {
-  canvas{
+@media (min-width: 900px) and (max-width: 1600px) {
+  canvas {
     height: 750px !important;
     width: 750px !important;
   }
+}
+
+
+@media (min-width: 700px) and (max-width: 900px) {
+  canvas {
+    height: 680px !important;
+    width: 680px !important;
   }
+}
 
+@media (min-width: 500px) and (max-width: 700px) {
+  canvas {
+    height: 490px !important;
+    width: 490px !important;
+  }
+}
 
-  @media ( min-width: 600px) and ( max-width: 1200px) {
-    canvas{
-      height: 570px !important;
-      width: 570px !important;
-    }
-    }
+@media (min-width: 400px) and (max-width: 500px) {
+  canvas {
+    height: 390px !important;
+    width: 390px !important;
+  }
+}
 
-    @media ( max-width: 600px) {
-      canvas{
-        height: 350px !important;
-        width: 350px !important;
-      }
-      }
+@media (min-width: 300px) and (max-width: 400px) {
+  canvas {
+    height: 290px !important;
+    width: 290px !important;
+  }
+}
+
+@media(max-width: 300px) {
+  canvas {
+    height: 200px !important;
+    width: 200px !important;
+  }
+}

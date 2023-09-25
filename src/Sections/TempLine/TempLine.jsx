@@ -15,7 +15,7 @@ function TempLine() {
       box03Ubi: "Toledo, España",
     },
     en: {
-      box01Title: "Scientific Baccalaureate",
+      box01Title: "Scientific High School",
       box01Ubi: "Toledo, Spain",
       box02Title: "Multiplatform Application Development",
       box02Ubi: "Toledo, Spain",

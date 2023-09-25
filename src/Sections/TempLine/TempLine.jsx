@@ -1,8 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "./TempLine.css";
+import { useDataContext } from "../../Context/DataContext";
 
 function TempLine() {
-  const counterElement = document.querySelector('.counter');
+  const { language } = useDataContext();
+
+  const translations = {
+    es: {
+      box01Title: "Bachillerato Científico",
+      box01Ubi: "Toledo, España",
+      box02Title: "Desarrollo de Aplicaciones Multiplataforma",
+      box02Ubi: "Toledo, España",
+      box03Title: "Analista de Datos Jr.",
+      box03Ubi: "Toledo, España",
+    },
+    en: {
+      box01Title: "Scientific Baccalaureate",
+      box01Ubi: "Toledo, Spain",
+      box02Title: "Multiplatform Application Development",
+      box02Ubi: "Toledo, Spain",
+      box03Title: "Data Analyst Jr.",
+      box03Ubi: "Toledo, Spain",
+    },
+  };
+  const translation = translations[language];
 
   const [lineOpacity, setLineOpacity] = useState({
     line01: 0,
@@ -84,8 +105,6 @@ function TempLine() {
         return prevOpacity;
       });
 
-
-
       setComponentMounted(true);
     };
 
@@ -133,22 +152,21 @@ function TempLine() {
   }, []);
 
   useEffect(() => {
-    if(!componentMounted) return
+    if (!componentMounted) return;
     if (lineOpacity.line01 == 1) setYear("2019");
     else if (lineOpacity.line01 < 1) setYear(null);
   }, [lineOpacity.line01]);
 
   useEffect(() => {
-    if(!componentMounted) return
+    if (!componentMounted) return;
     if (lineOpacity.line02 == 1) setYear("2021");
     else if (lineOpacity.line02 < 1) setYear("2019");
   }, [lineOpacity.line02]);
 
   useEffect(() => {
-    if(!componentMounted) return
+    if (!componentMounted) return;
     if (lineOpacity.line03 == 1) setYear("2023");
     else if (lineOpacity.line03 < 1) setYear("2021");
-
   }, [lineOpacity.line03]);
 
   return (
@@ -156,9 +174,13 @@ function TempLine() {
       id="time-line"
       className="relative h-full temp-line mb-20 flex flex-col justify-center items-center w-full "
     >
-
-        <h1 className={`counter text-8xl font-bold -z-50  ${year ? "opacity-20" : "opacity-0"}`}>{year}</h1>
-
+      <h1
+        className={`counter text-8xl font-bold -z-50  ${
+          year ? "opacity-20" : "opacity-0"
+        }`}
+      >
+        {year}
+      </h1>
 
       <div
         id="box01"
@@ -166,9 +188,9 @@ function TempLine() {
           lineOpacity.line01 > 0 ? "box-visible" : "opacity-0"
         }`}
       >
-        <h4>Bachillerato Científico</h4>
+        <h4>{translation.box01Title}</h4>
         <h6>IES Juanelo Turriano</h6>
-        <p>Toledo, Spain</p>
+        <p>{translation.box01Ubi}</p>
       </div>
       <div
         id="box02"
@@ -176,9 +198,9 @@ function TempLine() {
           lineOpacity.line02 > 0 ? "box-visible" : "opacity-0"
         }`}
       >
-        <h4>Desarrollo de Aplicaciones Multiplataforma</h4>
+        <h4>{translation.box02Title}</h4>
         <h6>IES Azarquiel</h6>
-        <p>Toledo, Spain</p>
+        <p>{translation.box02Ubi}</p>
       </div>
       <div
         id="box03"
@@ -186,9 +208,9 @@ function TempLine() {
           lineOpacity.line03 > 0 ? "box-visible" : "opacity-0"
         }`}
       >
-        <h4>Data Analyst Jr.</h4>
+        <h4>{translation.box03Title}</h4>
         <h6>ICSRed</h6>
-        <p>Toledo, Spain</p>
+        <p>{translation.box03Ubi}</p>
         <p>
           Tech: Python, Numpy, Pandas, Plotly, Excel, Git, Azure Devops, Scrum.
         </p>

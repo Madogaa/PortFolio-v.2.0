@@ -1,6 +1,23 @@
 import React from "react";
 import "./SiteEntry.css";
+import { useDataContext } from "../../Context/DataContext";
 function SiteEntry() {
+  const { language } = useDataContext();
+
+  const translations = {
+
+    es: {
+      title: "¡Es Mario!  <br/> Full Stack Developer",
+      description:
+        "Apasionado del proceso resolutivo de retos complejos e innovadores. Una persona curiosa e inquieta que disfruta aprendiendo. En constante formación intentando profundizar y abarcar en la variedad de tecnologías del mercado.",
+    },
+    en: {
+      title: "It's Mario!  <br/> Full Stack Developer",
+      description:
+        "Passionate about solving complex and innovative challenges. A curious and restless person who enjoys learning. Constantly training, trying to delve into and cover the variety of technologies on the market.",
+    },
+  };
+  const translation = translations[language];
   return (
     <div className="sizereg">
     <div className="entry flex justify-center gap-4 md:gap-10 md:justify-around items-center">
@@ -8,15 +25,8 @@ function SiteEntry() {
       <img className="w-full" src="/Removal.png" alt=""></img>
     </div>
       <div className="texto xl:order-first">
-        <h1 className="boujee-text">
-          It&apos;s Mario! <br /> Full Stack Developer
-        </h1>
-        <p>
-          Apasionado del proceso resolutivo de retos complejos e innovadores.
-          Una persona curiosa e inquieta que disfruta aprendiendo. En constante
-          formación intentando profundizar y abarcar en la variedad de
-          tecnologías del mercado.
-        </p>
+      <h1 className="boujee-text"  dangerouslySetInnerHTML={{ __html: translation.title }} />
+          <p>{translation.description}</p>
       </div>
     </div>
       <div className="lottie">

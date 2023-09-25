@@ -1,0 +1,16 @@
+.lang-select{
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    padding: 0.3rem;
+    outline: none;
+}
+
+.lang-select option{
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-weight: bold;
+    margin: 1rem;
+}
+

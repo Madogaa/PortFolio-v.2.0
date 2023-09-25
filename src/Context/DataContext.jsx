@@ -9,17 +9,19 @@ export function useDataContext() {
 
 export function DataProvider({ children }) {
   const [alerts, setAlerts] = useState([]);
+  const [language, setLanguage] = useState('es');
+
+  const handleLanguage = (selectedLanguage) => {
+    setLanguage(selectedLanguage);
+  };
 
     const addAlert = (message, type = 'info') => {
     toast[type](message); // Muestra el mensaje como notificación emergente
   };
 
-  const removeAlert = (id) => {
-    setAlerts((prevAlerts) => prevAlerts.filter((alert) => alert.id !== id));
-  };
 
   return (
-    <DataContext.Provider value={{ alerts, addAlert, removeAlert }}>
+    <DataContext.Provider value={{ addAlert, language , handleLanguage}}>
       {children}
     </DataContext.Provider>
   );
